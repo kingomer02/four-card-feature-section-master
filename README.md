@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/kingomer02/four-card-feature-section-master)]
+- Solution URL: [Solution](https://github.com/kingomer02/four-card-feature-section-master)
 - Live Site URL: [Website](https://github.com/kingomer02/four-card-feature-section-master)
   
 ## My process
