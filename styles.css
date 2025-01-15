@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-    height: 100vh;
+    height: auto;
     background-color: hsl(0, 0%, 98%);
 }
 
@@ -10,6 +10,7 @@ main {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    position: relative;
 }
 
 .main-content {
@@ -17,6 +18,12 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #title {
@@ -34,7 +41,7 @@ main {
     color: hsl(234, 12%, 34%);   
 }
 
-@media (min-width: 376px) {
+@media (min-width: 675px) {
     .content {
         color: rgb(124, 123, 123);
         margin-top: 15px;
@@ -44,7 +51,7 @@ main {
     .container{
         display: grid;
         justify-content: center;
-        height: 400px;
+        max-height: 400px;
         width: 65vw;
         grid-template: repeat(4, 25%) / repeat(6, 16.6%);
         gap: 30px;
@@ -52,7 +59,7 @@ main {
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 675px) {
     .content {
         color: rgb(124, 123, 123);
         margin-top: 15px;
@@ -60,13 +67,15 @@ main {
         width: 85vw;
         font-size: 17px;
     }
+
     .container {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: wrap;
         gap: 30px;
-        width: 85vw;
         background-color: hsl(0, 0%, 98%);
+        width: 80%;
+        max-height: 100%;
     }
 }
 
@@ -93,13 +102,23 @@ main {
 .itm {
     position: relative;
     display: flex;
-    flex-basis: 30vh;
+    flex-basis: 30%;
+    aspect-ratio: 1.7 / 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 150px;
     flex-direction: column;
     background-color: white;
     text-align: left;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 2px 8px 0px grey;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.itm:hover {
+    transform: scale(1.1);
 }
 
 .itm p {
@@ -119,13 +138,4 @@ main {
     bottom: 8%;
     right: 8%;
     width: 15%;
-}
-
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-}
-
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
 }
